@@ -1,0 +1,1 @@
+Feature: Login no SauceDemo\n\n  Scenario: Login com usuário válido\n    Given que o usuário acessa a página de login\n    When ele insere credenciais válidas\n    Then ele deve ser redirecionado para a tela de produtos

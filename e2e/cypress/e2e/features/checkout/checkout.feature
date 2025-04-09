@@ -1,0 +1,1 @@
+Feature: Fluxo de compra no SauceDemo\n\n  Scenario: Realizar checkout simples\n    Given que o usuário está logado\n    And adiciona um produto ao carrinho\n    When ele finaliza o checkout\n    Then a compra deve ser concluída com sucesso

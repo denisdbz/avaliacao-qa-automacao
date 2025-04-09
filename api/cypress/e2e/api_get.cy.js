@@ -1,0 +1,1 @@
+describe('GET /posts', () => {\n  it('deve retornar status 200 e um array de posts', () => {\n    cy.request('/posts').then((response) => {\n      expect(response.status).to.eq(200)\n      expect(response.headers['content-type']).to.include('application/json')\n      expect(response.body).to.be.an('array')\n    })\n  })\n})

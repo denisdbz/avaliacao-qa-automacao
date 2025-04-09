@@ -1,0 +1,1 @@
+class LoginPage {\n  acessar() {\n    cy.visit('https://www.saucedemo.com/')\n  }\n\n  preencherCredenciais(usuario, senha) {\n    cy.get('[data-test="username"]').type(usuario)\n    cy.get('[data-test="password"]').type(senha)\n    cy.get('[data-test="login-button"]').click()\n  }\n}\n\nexport default new LoginPage()

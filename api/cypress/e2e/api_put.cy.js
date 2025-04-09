@@ -1,0 +1,1 @@
+describe('PUT /posts/1', () => {\n  it('deve atualizar o post', () => {\n    cy.request('PUT', '/posts/1', {\n      id: 1,\n      title: 'teste atualizado',\n      body: 'conteúdo',\n      userId: 1\n    }).then((response) => {\n      expect(response.status).to.eq(200)\n      expect(response.body.title).to.eq('teste atualizado')\n    })\n  })\n})
