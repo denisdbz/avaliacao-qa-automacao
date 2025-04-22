@@ -1,59 +1,76 @@
-Avaliação Técnica - QA Automação
+# Avaliação de QA Automação
 
-Este repositório contém a entrega completa da avaliação técnica para a vaga de QA, abrangendo os seguintes testes:
+Este projeto foi desenvolvido como parte de uma avaliação técnica para vaga de QA Automação. Ele contém uma série de testes automatizados para API e Frontend.
 
-- Testes de API
-- Testes E2E Web
-- Testes de Carga
-- Testes Mobile (Android)
+## Índice
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Como Rodar o Projeto](#como-rodar-o-projeto)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Como Contribuir](#como-contribuir)
+- [Licença](#licença)
 
----
+## Sobre o Projeto
 
-Testes E2E - Cypress
+Este repositório contém testes automatizados de API e Frontend utilizando ferramentas como Cypress e Postman para garantir que as aplicações estejam funcionando corretamente.
 
-- Framework: Cypress
-- Testes baseados no comportamento do usuário
-- Validação de fluxos críticos e campos obrigatórios
+## Como Rodar o Projeto
 
-Como executar
+### Pré-requisitos
 
-cd e2e-tests
-npm install
-npx cypress open
-Testes de API - Postman + Newman
-Requisições criadas e testadas no Postman
+- Node.js
+- Docker (para executar em containers)
 
-Exportadas e executadas via Newman em linha de comando
+### Passos para rodar o projeto:
 
-Como executar
-cd api-tests
-newman run colecao.postman_collection.json -e ambiente.postman_environment.json
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/denisdbz/avaliacao-qa-automacao.git
+    ```
 
-Testes de Carga - k6
-Simulação de múltiplos usuários acessando a API simultaneamente
+2. Acesse o diretório do projeto:
+    ```bash
+    cd avaliacao-qa-automacao
+    ```
 
-Análise de performance e tempo de resposta
+3. Instale as dependências:
+    ```bash
+    npm install
+    ```
 
-Como executar
-cd carga-tests
-k6 run script-de-carga.js
+4. Execute os testes:
+    - **API**:
+      ```bash
+      npm run test:api
+      ```
+    - **Frontend (Cypress)**:
+      ```bash
+      npm run test:frontend
+      ```
 
-Testes Mobile - Appium + WebDriverIO
-Testes automatizados em um app Android de exemplo
+## Estrutura do Projeto
 
-Utiliza WebDriverIO com Appium
+O projeto é composto por dois diretórios principais:
 
-Pré-requisitos
-Node.js
+- **api/**: Contém os testes automatizados da API.
+- **frontend/**: Contém os testes automatizados utilizando Cypress para o frontend.
 
-Android Studio com emulador configurado
+## Tecnologias Utilizadas
 
-Appium Server em execução
+- **Cypress**: Para automação de testes de frontend.
+- **Postman**: Para automação de testes de API.
+- **Docker**: Para containerizar os testes e facilitar o ambiente de execução.
 
-Como executar
-cd mobile-tests
-npm install
-npx wdio run wdio.conf.js
+## Como Contribuir
 
-Considerações Finais
-Todos os testes foram organizados em pastas separadas e utilizam ferramentas modernas e consolidadas no mercado. A estrutura foi pensada para ser simples, clara e de fácil execução.
+Se desejar contribuir para o projeto, siga os seguintes passos:
+
+1. Fork o repositório.
+2. Crie uma branch para sua funcionalidade (`git checkout -b feature/nova-funcionalidade`).
+3. Faça as alterações e comite (`git commit -am 'Adiciona nova funcionalidade'`).
+4. Envie para o repositório remoto (`git push origin feature/nova-funcionalidade`).
+5. Abra um Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License.
